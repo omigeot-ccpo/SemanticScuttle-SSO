@@ -131,6 +131,24 @@ $admin_users = array();
  */
 $defaults['privacy'] = 0;
 
+/***************************************************
+ * SSO login
+ */
+
+/**
+ * IP address (dotted-quad) of the reverse-proxy trusted by the SSO system.
+ *
+ * @var string
+ */
+$allowedproxy = '';
+
+/**
+ * Whether to use the SSO connector (different from the SSL thing) or not.
+ *
+ * @var boolean
+ */
+$enablesso = false;
+
 
 /**
 * You have completed the basic configuration!

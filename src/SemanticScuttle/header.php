@@ -147,7 +147,10 @@ if (isset($_SERVER['REMOTE_ADDR'])) {
 }
 
 // 5 // Create mandatory services and objects
-$userservice = SemanticScuttle_Service_Factory::get('User');
+if ($GLOBALS['enablesso'])
+	$userservice = SemanticScuttle_Service_Factory::get('SSOUser');
+else
+	$userservice = SemanticScuttle_Service_Factory::get('User');
 $currentUser = $userservice->getCurrentObjectUser();
 
 $templateservice = SemanticScuttle_Service_Factory::get('Template');
